@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+}
+
+.body {
+	padding: 50px;
+	font: normal 16px/24px sans-serif;
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.list__item {
+	font-size: 100px;
+	height: 500px;
+	line-height: 500px;
+	background: lightgray;
+	padding: 0 50px;
+}
+
+.list__item + .list__item {
+	margin-top: 50px;
+}
