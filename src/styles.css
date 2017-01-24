@@ -7,6 +7,22 @@
 	font: normal 16px/24px sans-serif;
 }
 
+.feed__button {
+	background: lightgray;
+	text-align: center;
+	line-height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.feed__button--prev {
+	margin-bottom: 50px;
+}
+
+.feed__button--next {
+	margin-top: 50px;
+}
+
 .list {
 	list-style: none;
 	padding: 0;
@@ -18,7 +34,7 @@
 	height: 500px;
 	line-height: 500px;
 	background: lightgray;
-	padding: 0 50px;
+	text-align: center;
 }
 
 .list__item + .list__item {
