@@ -1,10 +1,15 @@
 'use strict';
 
 /**
+ * Import styles
+ */
+import styles from './styles.css'
+
+/**
  * Initialize test.
  * @param {Event} event
  */
-var init = function (event) {
+const init = event => {
 	console.log('Window is loaded!');
 	console.log(event);
 };
