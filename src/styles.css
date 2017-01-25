@@ -3,7 +3,8 @@
 }
 
 .body {
-	padding: 50px;
+	margin: 0;
+	padding: 20px;
 	font: normal 16px/24px sans-serif;
 }
 
@@ -31,8 +32,8 @@
 
 .list__item {
 	font-size: 100px;
-	height: 500px;
-	line-height: 500px;
+	height: 300px;
+	line-height: 300px;
 	background: lightgray;
 	text-align: center;
 }
