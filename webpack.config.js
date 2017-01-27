@@ -9,13 +9,17 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.js/,
+				test: /\.js$/,
 				loader: 'babel',
 				include: __dirname + '/src'
 			},
 			{
-				test: /\.css/,
+				test: /\.css$/,
 				loader: ExtractTextPlugin.extract('css')
+			},
+			{
+				test: /\.json$/,
+				loader: 'json'
 			}
 		]
 	},

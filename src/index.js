@@ -3,7 +3,9 @@
 /**
  * Import styles
  */
-import styles from './styles.css'
+import styles from './styles.css';
+
+import items from './items.json';
 
 /**
  * Require libraries
@@ -18,13 +20,22 @@ const SCROLL_POSITION_DELTA = STEP * (ITEM_HEIGHT + ITEM_GAP);
 let offset = 0;
 
 const getNewList = offset => {
-	let list = '<ul class="list js-list">';
-	for (let i = 1; i <= 2 * STEP; i++) {
-		list += `<li class="list__item">${offset + i}</li>`;
-	}
-	list += '</ul>';
+	let itemsString = '';
 
-	return list;
+	for (let i = 1; i <= 2 * STEP; i++) {
+		const articleId = offset + i;
+		const article = items[Math.abs(articleId % 10)];
+
+		itemsString +=
+			`<li class="list__item">
+				<div class="article">
+					<h2 class="article__title">${articleId}. Article</h2>
+					<div class="article__text">${article.text}</div>
+				</div>
+			</li>`;
+	}
+
+	return `<ul class="list js-list">${itemsString}</ul>`;
 };
 
 const listWrap = document.documentElement.querySelector('.js-list-wrap');
